@@ -92,7 +92,7 @@ class SwipeCards extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if(nextProps.cards && nextProps.cards.length > 0){
+    if(nextProps.cards && nextProps.cards.length > 0 && nextProps.cards !== this.props.cards){
       this.setState({
         card: nextProps.cards[0]
       })
